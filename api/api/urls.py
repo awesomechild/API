@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from restapi import views
+from rest_framework.urlpatterns import format_suffix_patterns
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^names/', views.NameList.as_view()),
 ]
+
+urlpatterns=format_suffix_patterns(urlpatterns)
