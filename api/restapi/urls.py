@@ -5,8 +5,9 @@ from restapi import views
 
 
 urlpatterns = patterns('',
-    url(r'^api$', views.NameList.as_view()),
-    url(r'^api/(?P<pk>[0-9]+)/$',views.NameDetail.as_view()),
+    url(r'^json$', views.NameList.as_view()),
+    #query
+    url(r'^json/(?P<pk>[0-9]+)/$',views.NameDetail.as_view()),
 )
 
 
